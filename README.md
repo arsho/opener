@@ -1,5 +1,15 @@
 # Opener
 
+[![Build Status](https://travis-ci.org/arsho/opener.svg?branch=master)](https://travis-ci.org/arsho/opener)
+![PyPI](https://img.shields.io/pypi/v/opener)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/opener)
+[![codecov](https://codecov.io/gh/arsho/opener/branch/master/graph/badge.svg)](https://codecov.io/gh/arsho/opener)
+![Lines of code](https://img.shields.io/tokei/lines/github/arsho/opener)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/arsho/opener)
+![GitHub contributors](https://img.shields.io/github/contributors/arsho/opener)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/opener)
+![PyPI - License](https://img.shields.io/pypi/l/opener)
+
 Opener is a puzzle solver Python package. Currently it solves the *Open the lock* puzzle.
 
 This package can be used on Linux/Unix, Mac OS and Windows systems.
@@ -19,6 +29,13 @@ pip install opener
 The *opener* is supported on Python 2.7, as well as Python 3.4 and above.
 
 ## How to use
+
+![Puzzle Example](resources/open_the_lock.png)
+
+The above figure outlines an *Open the Lock* puzzle. A valid unlock key of the above puzzle is: `679`
+
+[example.py](example.py) shows how to use [opener](https://pypi.org/project/opener/) package to solve the above puzzle.
+
 
 To solve an *Open the lock* puzzle:
 
