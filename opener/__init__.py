@@ -31,6 +31,6 @@ for key in unlock_keys:
 
 """
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 from .open_the_lock import get_keys
