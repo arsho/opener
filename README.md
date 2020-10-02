@@ -36,7 +36,7 @@ The *opener* is supported on Python 2.7, as well as Python 3.4 and above.
 
 The above figure outlines a three digits *Open the Lock* puzzle. A valid unlock key of the above puzzle is: `679`
 
-[example_1.py](examples/example_1.py) shows how to use [opener](https://pypi.org/project/opener/) package to solve the above puzzle.
+[example_1.py](https://github.com/arsho/opener/blob/master/examples/example_1.py) shows how to use [opener](https://pypi.org/project/opener/) package to solve the above puzzle.
 
 
 Solution of the above *Open the lock* puzzle:
@@ -70,7 +70,7 @@ for key in unlock_keys:
 
 The above figure outlines another *Open the Lock* puzzle with four digits combination. A valid unlock key of the above puzzle is: `9876`
 
-[example_2.py](examples/example_2.py) shows how to use [opener](https://pypi.org/project/opener/) package to solve the above puzzle.
+[example_2.py](https://github.com/arsho/opener/blob/master/examples/example_2.py) shows how to use [opener](https://pypi.org/project/opener/) package to solve the above puzzle.
 
 
 Solution of the above *Open the lock* puzzle:

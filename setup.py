@@ -9,7 +9,7 @@ def readme():
 
 
 setup(name="opener",
-      version="0.0.2",
+      version="0.0.4",
       description="Solve open the lock puzzle.",
       long_description=readme(),
       long_description_content_type="text/markdown",
@@ -17,6 +17,7 @@ setup(name="opener",
       classifiers=[
           "Operating System :: OS Independent",
           "License :: OSI Approved :: MIT License",
+          "Environment :: Console",
           "Programming Language :: Python",
           "Programming Language :: Python :: 2",
           "Programming Language :: Python :: 3",

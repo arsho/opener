@@ -13,6 +13,15 @@ The following steps can be used to create release package for PyPi.
     ```
     pip install -r development.txt
     ```
+- Run unit tests:
+    ```
+    python tests/unit_tests.py
+    ```
+- Run Python linter:
+    ```
+    pylint opener
+    flake8 opener
+    ```
 - Generate dist files:
     ```
     python setup.py sdist bdist_wheel
