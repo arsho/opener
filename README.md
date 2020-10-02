@@ -106,3 +106,13 @@ The following steps can be used to create release package for PyPi.
     ```
     pip install -i https://test.pypi.org/simple/ PACKAGE_NAME==PACKAGE_VERSION
     ```
+- To upload newer version to TestPyPI, change `version` in `setup.py` and other places where version information is stored. Then create the wheel and upload the files to TestPyPI:
+    ```
+    python setup.py sdist bdist_wheel
+    twine upload --skip-existing --repository testpypi dist/*
+    ```
+- If there is no error, then the package will be uploaded to TestPyPI.
+- To test the TestPyPI package, create a virtual environment, activate it and finally install the package:
+    ```
+    pip install -i https://test.pypi.org/simple/ PACKAGE_NAME==PACKAGE_VERSION
+    ```
