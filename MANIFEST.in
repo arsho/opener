@@ -1,3 +1,7 @@
 include README.md
 include Changelog.md
+include Development.md
+include .travis.yml
 include opener/*
+include examples/*
+include tests/*

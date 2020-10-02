@@ -1,16 +1,16 @@
-# -*- coding: utf-8 -*-
 from setuptools import setup
 import io
 
 
 def readme():
-    with io.open('README.md', encoding='utf8', errors='ignore') as f:
-        return f.read()
+    with io.open("README.md", encoding="utf8", errors="ignore") as f:
+        with io.open("Changelog.md", encoding="utf8", errors="ignore") as c:
+            return f.read() + c.read()
 
 
-setup(name='opener',
-      version='0.0.2',
-      description='Solve open the lock puzzle.',
+setup(name="opener",
+      version="0.0.2",
+      description="Solve open the lock puzzle.",
       long_description=readme(),
       long_description_content_type="text/markdown",
       install_requires=[],
@@ -24,12 +24,12 @@ setup(name='opener',
           "Topic :: Games/Entertainment :: Puzzle Games",
           "Topic :: Scientific/Engineering :: Mathematics"
       ],
-      keywords='opener puzzle open_the_lock solver',
-      url='http://github.com/arsho/opener',
-      author='Ahmedur Rahman Shovon',
-      author_email='shovon.sylhet@gmail.com',
-      license='MIT',
-      packages=['opener'],
+      keywords="opener puzzle open_the_lock solver",
+      url="http://github.com/arsho/opener",
+      author="Ahmedur Rahman Shovon",
+      author_email="shovon.sylhet@gmail.com",
+      license="MIT",
+      packages=["opener"],
       include_package_data=True,
       zip_safe=False
       )
