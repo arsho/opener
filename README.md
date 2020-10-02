@@ -1,96 +1,58 @@
 # Opener
 
-Bangla is a package for Bangla language users with various functionalities including Bangla date and Bangla numeric conversation.
-It can be used to get Bangla date that includes year, month, date, weekday and season of Bangla year.
-Bangla has used the rules from Wikipedia https://en.wikipedia.org/wiki/Bengali_calendars to convert 
-Gregorian date to Bangla date. It is based on the revised version of the Bengali calendar which was officially adopted in Bangladesh in 1987.
-Among the Bengali community in India, the provided date may differ.
+Opener is a puzzle solver Python package. Currently it solves the *Open the lock* puzzle.
 
-Moreover, this package has also a method to convert English numeric string to Bangla numeric string.
+This package can be used on Linux/Unix, Mac OS and Windows systems.
 
-This software can be used on Linux/Unix, Mac OS and Windows systems.
+## Features
 
-Features
-~~~~~~~~
+- Get keys for *Open the lock* puzzle.
 
--  Get Bangla date that includes:
+## Installation
 
-   - Bangla Date (১-৩১)
+You can install the *opener* from [PyPI](https://pypi.org/project/opener/):
 
-   - Bangla Month ("বৈশাখ", "জ্যৈষ্ঠ", "আষাঢ়", "শ্রাবণ", "ভাদ্র", "আশ্বিন", "কার্তিক", "অগ্রহায়ণ", "পৌষ", "মাঘ", "ফাল্গুন", "চৈত্র")
+```bash
+pip install opener
+```
 
-   - Bangla Year (১৯৮৭ - )
+The *opener* is supported on Python 2.7, as well as Python 3.4 and above.
 
-   - Bangla Season ("গ্রীষ্ম", "বর্ষা", "শরৎ", "হেমন্ত", "শীত", "বসন্ত")
+## How to use
 
-   - Bangla Weekday ("শনিবার", "রবিবার", "সোমবার", "মঙ্গলবার", "বুধবার", "বৃহস্পতিবার", "শুক্রবার")
+To solve an *Open the lock* puzzle:
 
--  Convert English numeric string to Bangla numeric string (123456 -> ১২৩৪৫৬).
+```python
+from opener import get_keys
 
-Installation
-~~~~~~~~~~~~
+number_of_positions = 3
+invalid_digits = (5, 2, 3)
+similarity_conditions = (
+    ([9, 6, 4], 2),
+    ([2, 8, 6], 1),
+    ([1, 4, 7], 1),
+    ([1, 8, 9], 1)
+)
+invalid_positioned_values = ((9, 1), (6, 8, 4), (4, 6, 7))
+valid_positioned_values = ((1,), (8,), (9,))
+unlock_keys = get_keys(number_of_positions,
+                       similarity_conditions,
+                       invalid_digits,
+                       invalid_positioned_values,
+                       valid_positioned_values)
+for key in unlock_keys:
+    print(key)
+    # 679
+ ```
+ 
+## Contribute
 
-We recommend install ``bangla`` through pip install using Python 3.
+Contributions are welcome from the community. Questions can be asked on the
+[issues page](https://github.com/arsho/opener/issues). Before creating a new issue, please take a moment to search
+and make sure a similar issue does not already exist. If one does exist, you
+can comment (most simply even with just a `:+1:`) to show your support for that
+issue.
 
-.. code:: bash
-
-    $ pip install bangla
-
-Example
-~~~~~~~
-
-To get today's date in Bangla calendar:
-
-.. code:: python
-
-	import bangla
-	bangla_date = bangla.get_date()
-	print(bangla_date) 
-	# Output: {'date': '৮', 'month': 'আষাঢ়', 'year': '১৪২৪', 'season': 'বর্ষা', 'weekday': 'বৃহস্পতিবার'} 
-
-	
-To convert any Gregorian date to Bangla date :
-
-.. code:: python
-
-    import bangla
-    bangla_date = bangla.get_date(20,6,2017) # date, month, year
-    print(bangla_date) 
-    # Output: {'date': '৬', 'month': 'আষাঢ়', 'year': '১৪২৪', 'season': 'বর্ষা', 'weekday': 'মঙ্গলবার'}
-	
-To convert any English numeric string to Bangla numeric string :
-
-.. code:: python
-
-    import bangla
-    bangla_numeric_string = bangla.convert_english_digit_to_bangla_digit("123456")
-    print(bangla_numeric_string)
-    # Output: ১২৩৪৫৬
-	
-Contribute
-~~~~~~~~~~
-
-Create Github Pull Request https://github.com/arsho/bangla/pulls
-
-If you have suggestion use GitHub issue system or send a message in Facebook https://www.facebook.com/ars.shovon.
-
-Thanks
-~~~~~~
-
-Influenced by বঙ্গাব্দ - jQuery Plugin 
-https://github.com/nuhil/bangla-calendar
-
-.. |Build Status| image:: https://travis-ci.org/arsho/bangla.svg?branch=master
-   :target: https://travis-ci.org/arsho/bangla
-
-.. |Version| image:: https://img.shields.io/pypi/v/bangla.svg?
-   :target: http://badge.fury.io/py/bangla
-   
-.. |Python| image:: https://img.shields.io/pypi/pyversions/bangla.svg?
-   :target: https://pypi.python.org/pypi/bangla/0.0.1
-      
-.. |Size| image:: https://img.shields.io/github/size/arsho/bangla/bangla/__init__.py.svg?
-   :target: https://github.com/arsho/bangla/   
-   
-.. |Codecov| image:: https://codecov.io/github/arsho/bangla/coverage.svg?branch=master
-   :target: https://codecov.io/github/arsho/bangla      
+If you have direct contributions you would like considered for incorporation
+into the project you can [fork this repository](https://github.com/arsho/opener) and
+[submit a pull request](https://github.com/arsho/opener/pulls) for review.

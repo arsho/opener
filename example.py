@@ -1,12 +1,3 @@
-"""
-opener
-======
-Open the lock puzzle solver.
-
-Usage
------
-Solve an open the lock puzzle::
-
 from opener import get_keys
 
 number_of_positions = 3
@@ -26,11 +17,3 @@ unlock_keys = get_keys(number_of_positions,
                        valid_positioned_values)
 for key in unlock_keys:
     print(key)
-
-
-
-"""
-
-__version__ = '0.0.1'
-
-from .open_the_lock import get_keys
