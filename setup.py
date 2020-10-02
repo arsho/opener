@@ -12,6 +12,7 @@ setup(name='opener',
       version='0.0.1',
       description='Solve open the lock puzzle.',
       long_description=readme(),
+      long_description_content_type="text/markdown",
       install_requires=[],
       classifiers=[
           "Operating System :: OS Independent",

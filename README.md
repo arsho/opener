@@ -30,7 +30,7 @@ The *opener* is supported on Python 2.7, as well as Python 3.4 and above.
 
 ## How to use
 
-![Puzzle Example](resources/open_the_lock.png)
+![Puzzle Example](https://raw.githubusercontent.com/arsho/opener/master/resources/open_the_lock.png)
 
 The above figure outlines an *Open the Lock* puzzle. A valid unlock key of the above puzzle is: `679`
 
@@ -61,6 +61,12 @@ for key in unlock_keys:
     print(key)
     # 679
  ```
+
+## Authors
+- Maintainer: [Ahmedur Rahman Shovon](https://arshovon.com/)
+- Please see the [list of contributors](https://github.com/arsho/opener/graphs/contributors) to find the contributors of this project.
+
+
  
 ## Contribute
 
@@ -73,3 +79,30 @@ issue.
 If you have direct contributions you would like considered for incorporation
 into the project you can [fork this repository](https://github.com/arsho/opener) and
 [submit a pull request](https://github.com/arsho/opener/pulls) for review.
+
+The following steps can be used to create release package for PyPi.
+- Create a virtual environment:
+    ```
+    python3 -m venv venv
+    ```
+- Activate virtual environment:
+    ```
+    source venv/bin/activate
+    ```
+- Install necessary packages:
+    ```
+    pip install -r development.txt
+    ```
+- Generate dist files:
+    ```
+    python setup.py sdist bdist_wheel
+    ```
+- Upload to TestPyPI which is a separate instance of the Python Package Index. A TestPyPI account is needed for this which can be registered from [https://test.pypi.org/](https://test.pypi.org/):
+    ```
+    twine upload --repository testpypi dist/*
+    ```
+- If there is no error, then the package will be uploaded to TestPyPI.
+- To test the TestPyPI package, create a virtual environment, activate it and finally install the package:
+    ```
+    pip install -i https://test.pypi.org/simple/ PACKAGE_NAME==PACKAGE_VERSION
+    ```
